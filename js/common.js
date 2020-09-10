@@ -14,6 +14,11 @@
 
 
     $('#kimBox').load('main.html') //load시켜라 + 파일경로(또는 파일명)만 쓰면 됨
-
+    $('.topmenu > a').on('click', function(e){
+        e.preventDefault();
+        var url = $(this).attr('href')
+        $('#kimContainer').remove();
+        $('#kimBox').load(url)
+    })
 
 })(jQuery)
